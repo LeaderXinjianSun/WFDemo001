@@ -278,7 +278,7 @@ namespace WFDemo001.Design
                     CameraAppendHObject0 = symbolXLD1;
                     string bar = DecodedDataStrings.TupleSelect(0).S;
 
-                    CameraAppendHMessage0 = new HMsgEntry(bar, 10, 10, "magenta", "window", "box", "false", 36, "mono", "true", "false");
+                    CameraAppendHMessage0 = new HMsgEntry(bar, 10, 10, "magenta", "window", "box", "false", 24, "mono", "true", "false");
                 }
                 else
                 {
