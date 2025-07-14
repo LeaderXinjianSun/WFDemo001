@@ -246,7 +246,9 @@ namespace WFDemo001.Design
                 CameraAppendHObject0 = null;
                 CameraAppendHMessage0 = null;
                 await Task.Delay(500);
-                HOperatorSet.CreateDataCode2dModel("QR Code", new HTuple(), new HTuple(), out var DataCodeHandle);
+                //Data Matrix ECC 200
+                //QR Code
+                HOperatorSet.CreateDataCode2dModel("Data Matrix ECC 200", new HTuple(), new HTuple(), out var DataCodeHandle);
                 HOperatorSet.SetDataCode2dParam(DataCodeHandle, "polarity", "any");
                 HOperatorSet.SetDataCode2dParam(DataCodeHandle, "timeout", 200);
                 HOperatorSet.SetDataCode2dParam(DataCodeHandle, "string_encoding", "locale");
@@ -259,7 +261,7 @@ namespace WFDemo001.Design
                 HOperatorSet.ClearDataCode2dModel(DataCodeHandle);
                 if (DecodedDataStrings.TupleLength() == 0)
                 {
-                    HOperatorSet.CreateDataCode2dModel("QR Code", new HTuple(), new HTuple(), out var DataCodeHandle1);
+                    HOperatorSet.CreateDataCode2dModel("Data Matrix ECC 200", new HTuple(), new HTuple(), out var DataCodeHandle1);
                     HOperatorSet.FindDataCode2d(imageReduced, out symbolXLD1, DataCodeHandle1, "train", "all", out ResultHandles, out DecodedDataStrings);
                     if (DecodedDataStrings.TupleLength() > 0)
                     {
